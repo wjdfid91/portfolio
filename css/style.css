@@ -71,7 +71,7 @@ main {
   height: 100vh;
   color: white;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url("/images/mainimg.jpg") center center;
+    url("../images/mainimg.jpg") center center;
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -244,7 +244,7 @@ section .do-me .do-inner:hover i {
 
 /* background.css */
 .bg {
-  background: url("/images/background.jpg") center center;
+  background: url("../images/background.jpg") center center;
   background-size: cover;
   background-attachment: fixed;
   height: 650px;
