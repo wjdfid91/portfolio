@@ -70,3 +70,34 @@ for (let i = 0; i < scollMoveEl.length; i++) {
   });
 }
 /* End move.js */
+
+
+/* 스크롤 이벤트 */
+let observer = new IntersectionObserver((e) => {
+  e.forEach((box) => {
+    if (box.isIntersecting) {
+      box.target.style.opacity = 1;
+      box.target.style.transform = "translate(0, -100px)";
+    } else {
+      box.target.style.opacity = 0;
+    }
+  });
+});
+
+let scr1 = document.querySelector(".left");
+observer.observe(scr1);
+
+let scr2 = document.querySelector(".right");
+observer.observe(scr2);
+
+let scr3 = document.querySelectorAll(".do-inner");
+observer.observe(scr3[0]);
+observer.observe(scr3[1]);
+observer.observe(scr3[2]);
+observer.observe(scr3[3]);
+
+let scr4 = document.querySelectorAll(".portfolio-inner");
+observer.observe(scr4[0]);
+observer.observe(scr4[1]);
+observer.observe(scr4[2]);
+
